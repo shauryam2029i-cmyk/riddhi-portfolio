@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddhi Pandya | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        /* ---- CORE AESTHETICS ---- */
+        :root {
+            --bg-dark: #0a0a0a;
+            --text-light: #e5e5e5;
+            --accent-gold: #c5a059; /* Artifacts & Schiaparelli */
+            --accent-lime: #84cc16; /* Nazar */
+            --accent-lilac: #d8b4fe; /* Tangled */
+            --accent-aqua: #5eead4; /* Woven */
+        }
+        body { background-color: var(--bg-dark); color: var(--text-light); font-family: 'Montserrat', sans-serif; }
+        h1, h2, h3, h4, .serif { font-family: 'Playfair Display', serif; }
+        .gold-accent { color: var(--accent-gold); }
+        html { scroll-behavior: smooth; }
+
+        /* ---- NATURAL IMAGE ASPECT RATIOS (NO CROPPING) ---- */
+        .img-container { 
+            overflow: hidden; 
+            position: relative; 
+            width: 100%; 
+        }
+        /* Utility for centered, smaller final objects */
+        .img-centered-medium {
+            max-width: 700px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .img-container img { 
+            width: 100%; 
+            height: auto; /* Maintains original shape */
+            display: block; 
+            transition: transform 0.8s ease; 
+        }
+        .img-container:hover img { transform: scale(1.02); } 
+
+        /* ---- LABELS ---- */
+        .label-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #666;
+            margin-top: 12px;
+            display: block;
+        }
+
+        /* ---- SEPARATOR ---- */
+        .project-separator {
+            width: 1px;
+            height: 120px;
+            background: linear-gradient(to bottom, transparent, #333, transparent);
+            margin: 100px auto;
+        }
+        
+        .nav-blend { mix-blend-mode: difference; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center nav-blend text-white">
+        <div class="text-xl font-bold tracking-widest uppercase serif">Riddhi Pandya</div>
+        <div class="space-x-5 text-[0.65rem] md:text-xs uppercase tracking-widest hidden md:block">
+            <a href="#home" class="hover:text-amber-400 transition">Home</a>
+            <a href="#project-01" class="hover:text-amber-400 transition">Artifacts</a>
+            <a href="#project-02" class="hover:text-lime-400 transition">Nazar</a>
+            <a href="#project-03" class="hover:text-purple-400 transition">Tangled</a>
+            <a href="#project-04" class="hover:text-teal-400 transition">Woven</a>
+            <a href="#project-05" class="hover:text-amber-400 transition">Schiaparelli</a>
+            <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 pt-20 pb-10 relative">
+        <div class="md:w-1/2 space-y-6 z-10 mb-10 md:mb-0">
+            <h1 class="text-5xl md:text-7xl leading-tight">Enter Ryu’s <br><span class="italic gold-accent">Paracosm</span></h1>
+            <p class="text-sm md:text-lg max-w-lg leading-relaxed font-light text-gray-400 border-l-2 border-amber-800 pl-6">
+                A portal where imagination becomes tangible. I design for those who believe that every outfit should have a narrative. 
+                Inspired by the depths of human psychology and cultural philosophy.
+            </p>
+        </div>
+        <div class="md:w-1/2 flex justify-end">
+            <img src="portrait.jpeg" alt="Riddhi Pandya" class="w-full max-w-md shadow-2xl grayscale hover:grayscale-0 transition duration-1000 object-cover rounded-sm" style="max-height: 85vh; width: auto;">
+        </div>
+    </section>
+
+    <section id="project-01" class="py-24 bg-zinc-950">
+        
+        <div class="max-w-4xl mx-auto text-center px-6 mb-24">
+            <span class="text-amber-600 tracking-[0.2em] uppercase text-xs font-semibold mb-4 block">Project 01</span>
+            <h2 class="text-4xl md:text-6xl serif mb-8 text-white">The Artifact Collection</h2>
+            <div class="w-12 h-1 bg-amber-800 mx-auto mb-8"></div>
+            <p class="text-gray-300 leading-loose font-light md:text-lg serif italic opacity-90">
+                "This concept explores beauty not as perfection, but as time made visible. Ancient artefacts from Egypt, Rome, and the Middle East become metaphors for how history leaves traces: ancient pottery, sculptures, and age-defining cracks that turn objects into living archives of touch, ritual, and memory. The palette of worn browns, lapis blues, molten gold, and carnelian reds channels Galliano's 2004 Dior couture while echoing the stones, metals, and pigments that once adorned temples and bodies."
+            </p>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col gap-24">
+            <div>
+                <div class="img-container w-full">
+                    <img src="museum-references.jpeg" alt="Historical References">
+                </div>
+                <span class="label-text">Fig 1. The Historical Echoes</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div>
+                    <div class="img-container">
+                        <img src="motifs.jpeg" alt="Design Motifs">
+                    </div>
+                    <span class="label-text">Fig 2. Extracted Motifs & Symbols</span>
+                </div>
+                <div> 
+                    <div class="img-container">
+                        <img src="pattern-scarab.jpeg" alt="Scarab Pattern">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <div class="img-container">
+                    <img src="moodboard.jpeg" alt="Moodboard">
+                </div>
+                <div class="img-container">
+                    <img src="reference-statue.jpeg" alt="Statue">
+                </div>
+                <div class="img-container">
+                    <img src="reference-pottery.jpeg" alt="Pottery">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-8 bg-[#111] p-8 md:p-16 border border-zinc-900 items-start">
+                <div class="img-container">
+                    <img src="pattern-blue.jpeg" alt="Blue Pattern">
+                </div>
+                <div class="img-container">
+                    <img src="pattern-brown.jpeg" alt="Brown Pattern">
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <div class="img-container w-full shadow-xl">
+                    <img src="fashion-lineup.jpeg" alt="Final Collection">
+                </div>
+                <div class="text-center mt-8">
+                    <span class="serif text-2xl md:text-3xl text-amber-500 italic">The Final Silhouette</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-separator"></div>
+
+    <section id="project-02" class="py-24 bg-[#0a0a0a]">
+        
+        <div class="max-w-4xl mx-auto text-center px-6 mb-24">
+            <span class="text-lime-500 tracking-[0.2em] uppercase text-xs font-semibold mb-4 block">Project 02</span>
+            <h2 class="text-4xl md:text-6xl serif mb-8 text-white">Nazar No Entry</h2>
+            <div class="w-12 h-1 bg-lime-700 mx-auto mb-8"></div>
+            <p class="text-gray-300 leading-loose font-light md:text-lg serif italic opacity-90">
+                "Nazar No Entry takes the classic evil eye, nimbu-mirchi, and all those desi 'protection hacks' and gives them a glow-up. The lemons have attitude. The chillies have personality. The eyes are basically saying, 'Look at me, but don’t you dare nazar me.' It’s fun, exaggerated, filmy, and 100% Indian inspired by the same energy with which dadi waves mirchis around your head like she’s performing a personal exorcism."
+            </p>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col gap-24">
+            <div>
+                <div class="img-container w-full">
+                    <img src="nazar-moodboard.jpeg" alt="Nazar Moodboard">
+                </div>
+                <span class="label-text">Fig 1. Inspiration: Desi Protection Hacks</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <div class="img-container"> <img src="nazar-1.jpeg" alt="Detail Shot 1"> </div>
+                <div class="img-container"> <img src="nazar-2.jpeg" alt="Detail Shot 2"> </div>
+                <div class="img-container"> <img src="nazar-3.jpeg" alt="Detail Shot 3"> </div>
+                <div class="img-container"> <img src="nazar-4.jpeg" alt="Detail Shot 4"> </div>
+                <div class="img-container"> <img src="nazar-5.jpeg" alt="Detail Shot 5"> </div>
+                <div class="img-container"> <img src="nazar-6.jpeg" alt="Detail Shot 6"> </div>
+            </div>
+
+            <div class="mt-12">
+                <div class="img-container w-full shadow-xl">
+                    <img src="nazar-lineup.jpeg" alt="Nazar Final Collection">
+                </div>
+                <div class="text-center mt-8">
+                    <span class="serif text-2xl md:text-3xl text-lime-500 italic">The Final Silhouette</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-separator"></div>
+
+    <section id="project-03" class="py-24 bg-[#0a0a0a]">
+        
+        <div class="max-w-4xl mx-auto text-center px-6 mb-24">
+            <span class="text-purple-400 tracking-[0.2em] uppercase text-xs font-semibold mb-4 block">Project 03</span>
+            <h2 class="text-4xl md:text-6xl serif mb-8 text-white">Tangled Bags</h2>
+            <div class="w-12 h-1 bg-purple-500 mx-auto mb-8"></div>
+            <p class="text-gray-300 leading-loose font-light md:text-lg serif italic opacity-90">
+                "This is a collection of handbags I created with a whimsical theme inspired by Disney's Tangled. The movie is very close to my heart, and I resonate deeply with the character Rapunzel, so the inspiration came from my desire to express my inner child through this work. The target audience is people like me who enjoy detailed, colorful, and almost maximalist accessories."
+            </p>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col gap-24">
+            <div>
+                <div class="img-container w-full shadow-xl">
+                    <img src="tangled-moodboard.jpeg" alt="Tangled Moodboard">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="flex flex-col gap-8">
+                    <div class="img-container"><img src="tangled-1.jpeg" alt="Bag Detail 1"></div>
+                    <div class="img-container"><img src="tangled-3.jpeg" alt="Bag Detail 3"></div>
+                </div>
+                <div class="flex flex-col gap-8 mt-10 md:mt-20"> 
+                    <div class="img-container"><img src="tangled-2.jpeg" alt="Bag Detail 2"></div>
+                    <div class="img-container"><img src="tangled-4.jpeg" alt="Bag Detail 4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-separator"></div>
+
+    <section id="project-04" class="py-24 bg-[#0a0a0a]">
+        
+        <div class="max-w-4xl mx-auto text-center px-6 mb-24">
+            <span class="text-teal-400 tracking-[0.2em] uppercase text-xs font-semibold mb-4 block">Project 04</span>
+            <h2 class="text-4xl md:text-6xl serif mb-8 text-white">Woven Fairytale</h2>
+            <div class="w-12 h-1 bg-teal-600 mx-auto mb-8"></div>
+            <p class="text-gray-300 leading-loose font-light md:text-lg serif italic opacity-90">
+                "This woven belt blends marine beauty with mythic charm. A stylized mermaid forms the central motif, framed by waves, fish, and an oyster symbolizing hidden treasures. Together, the elements create a fluid, storytelling pattern that brings the magic and mystery of the ocean to a wearable textile."
+            </p>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col gap-24">
+            <div>
+                <div class="img-container w-full shadow-xl">
+                    <img src="woven-moodboard.jpeg" alt="Woven Fairytale Moodboard">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <div class="img-container shadow-lg">
+                    <img src="woven-1.jpeg" alt="Woven Detail 1">
+                </div>
+                <div class="img-container shadow-lg mt-10 md:mt-16">
+                    <img src="woven-2.jpeg" alt="Woven Detail 2">
+                </div>
+                <div class="img-container shadow-lg mt-20 md:mt-32">
+                    <img src="woven-3.jpeg" alt="Woven Detail 3">
+                </div>
+            </div>
+
+            <div class="mt-12">
+                 <div class="img-container img-centered-medium shadow-2xl">
+                    <img src="woven-pillow.jpeg" alt="Final Woven Pillow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-separator"></div>
+
+    <section id="project-05" class="py-24 bg-[#0a0a0a]">
+        
+        <div class="max-w-4xl mx-auto text-center px-6 mb-24">
+            <span class="text-amber-600 tracking-[0.2em] uppercase text-xs font-semibold mb-4 block">Project 05</span>
+            <h2 class="text-4xl md:text-6xl serif mb-8 text-white">Schiaparelli Collection</h2>
+            <div class="w-12 h-1 bg-amber-800 mx-auto mb-8"></div>
+            <p class="text-gray-300 leading-loose font-light md:text-lg serif italic opacity-90">
+                "This collection is inspired by Schiaparelli's surrealist legacy and Elsa's collaborations with the legendary artist Salvador Dalí. I explored techniques like resin casting, smocking, and gold thread embroidery to reimagine surrealism in a way that felt approachable to me."
+            </p>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col gap-24">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="img-container shadow-xl">
+                    <img src="schiap-moodboard-1.jpeg" alt="Schiaparelli Moodboard 1">
+                </div>
+                <div class="img-container shadow-xl">
+                    <img src="schiap-moodboard-2.jpeg" alt="Schiaparelli Moodboard 2">
+                </div>
+            </div>
+
+            <div>
+                <div class="img-container shadow-2xl">
+                    <img src="schiap-feature.jpeg" alt="Feature / Hero Shot">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="img-container shadow-lg">
+                    <img src="schiap-detail-1.jpeg" alt="Detail 1">
+                </div>
+                <div class="img-container shadow-lg">
+                    <img src="schiap-detail-2.jpeg" alt="Detail 2">
+                </div>
+                <div class="img-container shadow-lg">
+                    <img src="schiap-detail-3.jpeg" alt="Detail 3">
+                </div>
+                <div class="img-container shadow-lg">
+                    <img src="schiap-detail-4.jpeg" alt="Detail 4">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mt-12">
+                <div class="img-container shadow-xl">
+                     <img src="schiap-final-1.jpeg" alt="Final Look 1">
+                </div>
+                <div class="img-container shadow-xl mt-20 md:mt-40">
+                     <img src="schiap-final-2.jpeg" alt="Final Look 2">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer id="contact" class="py-32 px-10 text-center bg-[#050505] border-t border-zinc-900">
+        <h2 class="text-3xl mb-12 serif italic text-gray-300">Let's create something profound.</h2>
+        
+        <div class="space-y-4">
+            <a href="mailto:riddhipandya72@gmail.com" class="block text-amber-600 hover:text-white transition uppercase tracking-[0.2em] text-sm pb-1">
+                riddhipandya72@gmail.com
+            </a>
+            
+            <a href="tel:8401654824" class="block text-gray-500 hover:text-white transition tracking-[0.2em] text-sm">
+                +91 8401654824
+            </a>
+        </div>
+
+        <div class="mt-20 text-gray-700 text-xs tracking-widest uppercase">
+            © 2025 Riddhi Pandya Portfolio
+        </div>
+    </footer>
+
+</body>
+</html>
